@@ -4,8 +4,8 @@
 <div>
 <span>准备环境(environment:win7,jdk8,eclipse,maven3,nexus,git)</span>
 
-<h6>maven3环境</h6>http://maven.apache.org/download.cgi
-#M2_HOME=$\apache-maven-3.3.9<br/>
+<h6>maven3环境</h6>http://maven.apache.org/download.cgi<br/>
+M2_HOME=$\apache-maven-3.3.9<br/>
 
 设置path:%M2_HOME%\bin<br/>
 cmd check:mvn -version<br/>
