@@ -17,12 +17,15 @@ cmd help:mvn help:system<br/>
 NEXUS_HOME=$\nexus-3.0.2-02<br/>
 设置path:%NEXUS_HOME%\bin<br/>
 
-编辑 bin\nexus.vmoptions <br/>
-```-Dkaraf.data=$\nexus_data
+编辑 
+```bin\nexus.vmoptions
+-Dkaraf.data=$\nexus_data
 -Djava.io.tmpdir=$\nexus_temp
 ```
-编辑etc\org.sonatype.nexus.cfg <br/>
-```application-port=9091
+
+编辑etc\org.sonatype.nexus.cfg
+```etc\org.sonatype.nexus.cfg
+application-port=9091
 application-host=127.0.0.1
 ```
 
