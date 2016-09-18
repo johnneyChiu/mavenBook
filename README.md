@@ -20,10 +20,7 @@ NEXUS_HOME=$\nexus-3.0.2-02<br/>
 编辑 bin\nexus.vmoptions <br/>
 -Dkaraf.data=$\nexus_data  <br/>
 -Djava.io.tmpdir=$\nexus_temp  <br/>
-```xml
-dsadsa
 
-```
 
 编辑etc\org.sonatype.nexus.cfg  <br/>
 application-port=9091 <br/>
