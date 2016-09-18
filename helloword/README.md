@@ -2,6 +2,7 @@
 # helloword
 # mvn clean package
 # cmd :java -jar $\helloword.*.jar
+# 配置mainefest
 ```
 <plugin>
  			<groupId>org.apache.maven.plugins</groupId>
