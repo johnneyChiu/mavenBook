@@ -23,6 +23,13 @@ NEXUS_HOME=$\nexus-3.0.2-02<br/>
 -Djava.io.tmpdir=$\nexus_temp
 ```
 
+```xml
+<dependency>
+    <groupId>com.sparkjava</groupId>
+    <artifactId>spark-core</artifactId>
+    <version>2.5</version>
+</dependency>
+```
 编辑etc\org.sonatype.nexus.cfg
 ```etc\org.sonatype.nexus.cfg
 application-port=9091
