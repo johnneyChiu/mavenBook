@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.xiaoq.account</groupId>
+  <artifactId>account.mail</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>account.mail Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+ <!-- properties -->
+	
+	<properties>
+		<provided.servlet.api>3.1.0</provided.servlet.api>
+		
+		<compile.springframework.version>4.3.2.RELEASE</compile.springframework.version>
+		<compile.mail.version>1.5.0-b01</compile.mail.version>
+		
+		<test.junit.version>4.12</test.junit.version>
+		<test.greenmail.version>1.5.1</test.greenmail.version>
+	</properties>
+	
+	<!-- dependencies -->
+	<!-- 依赖具有传递性，但是范围不会变大，如第一依赖是test，而第二依赖是compile，则该依赖范围最终是test -->
+	<dependencies>
+		<!-- compile dependency -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${compile.springframework.version}</version>
+			<!-- compile 默认的的 scope 存在于编译、测试、运行的classpath-->
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${compile.springframework.version}</version>
+			<!-- compile 默认的的 scope 存在于编译、测试、运行的classpath-->
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${compile.springframework.version}</version>
+			<!-- compile 默认的的 scope 存在于编译、测试、运行的classpath-->
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${compile.springframework.version}</version>
+			<!-- compile 默认的的 scope 存在于编译、测试、运行的classpath-->
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>${compile.springframework.version}</version>
+			<!-- compile 默认的的 scope 存在于编译、测试、运行的classpath-->
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${compile.springframework.version}</version>
+			<!-- compile 默认的的 scope 存在于编译、测试、运行的classpath-->
+			<scope>compile</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>${compile.mail.version}</version>
+		</dependency>
+		
+		
+		<!-- provided scope -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${provided.servlet.api}</version>
+			<!-- provided 存在于编译和测试的classpath-->
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- test scope -->		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${test.junit.version}</version>
+			<!-- test scope 只会存在于测试的classpath（只有在编译测试代码和测试有效） -->
+			<scope>test</scope> 
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.icegreen/greenmail -->
+		<dependency>
+		    <groupId>com.icegreen</groupId>
+		    <artifactId>greenmail</artifactId>
+		    <version>${test.greenmail.version}</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- runtime 只有在测试和运行的classpath中，不会在编译时加载  -->
+		<!-- system与三种classpath 相关，但是是加载本地环境的jar等，需要与systemPath结合使用 -->
+	</dependencies>
+	<build>
+		<finalName>account.email.com</finalName>
+	</build>
+</project>
