@@ -27,6 +27,7 @@ application-port=9091 <br/>
 application-host=127.0.0.1 <br/>
 
 简单设置参见http://blog.csdn.net/fengyunhaitan/article/details/51685498<br/>
+http://snowolf.iteye.com/blog/1605811<br/>
 cmd nexus.exe /run<br/>
 
 打开 http://localhost:9091/my_nexus/ 可以看到自己的nexus私人仓库
